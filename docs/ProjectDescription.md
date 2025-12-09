@@ -1,0 +1,17 @@
+# Project Description
+- name: CodeDaily
+- purpose: It is like a startup website,
+  - will provide daily coding challenges for user to learn and experiment
+  - some background can be given for the daily challenge
+  - will have several different study subjects i.e.
+    - 7 Days JavaScript Challenge (basic): see JavaScript-7Days-Challenge.md for syllabus
+    - 28 Days JavaScript Challenge (basic to Advanced), see JavaScript-2Days-Challenge.md for syllabus
+    - etc (will be added later) 
+- Technology:
+  - Angular
+  - bootstrap will be used for styling
+  - project image is CodeDaily.png in public folder: matching favion and logo will be created based on this one
+  - Backend can be supabase: will be added later
+  - No scoring, but can be added later
+  - Command prompt will be used
+  - for each prompt tasks.md will be updated, and will be updated when the task is completed

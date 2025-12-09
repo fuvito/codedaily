@@ -1,0 +1,102 @@
+<section class="container mt-4 js7-page">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <a routerLink="/" class="js7-back-link">
+      ‹ Back to Home
+    </a>
+    <span class="js7-page-label">Basics track · 7 days</span>
+  </div>
+
+  @if (days.length > 0) {
+    <div class="row g-4">
+      <div class="col-12 col-lg-8">
+        <header class="js7-header mb-3">
+          <p class="js7-kicker mb-1">7 Days JavaScript Challenge</p>
+          <h2 class="js7-title mb-1">{{ currentDay.topic }}</h2>
+          <p class="js7-subtitle mb-0">
+            Day {{ currentDay.id }} · {{ currentDay.title }}
+          </p>
+        </header>
+
+        <article class="js7-card">
+          <h3 class="js7-card-heading">Challenge</h3>
+          <p class="js7-card-body">{{ currentDay.challenge }}</p>
+
+          <div class="js7-hint mt-3">
+            <p class="mb-1">Tip:</p>
+            <p class="mb-0">
+              Open your editor and complete this challenge in a small file or
+              CodeSandbox. Keep your solution short and focused; you can always
+              revisit later.
+            </p>
+          </div>
+
+          <div class="js7-notes mt-4">
+            <label class="js7-notes-label mb-1">
+              Your notes or solution (not saved)
+            </label>
+            <textarea
+              class="form-control js7-notes-textarea"
+              rows="5"
+              placeholder="Write your thoughts, approach, or solution here while you work on this day."
+              [value]="currentNote"
+              (input)="onNoteChange($any($event.target).value)"
+            ></textarea>
+            <div class="d-flex justify-content-end mt-2">
+              <button
+                type="button"
+                class="btn btn-link btn-sm p-0"
+                (click)="clearCurrentNote()"
+              >
+                Clear notes for this day
+              </button>
+            </div>
+          </div>
+
+          <div class="js7-actions mt-4 d-flex justify-content-between align-items-center">
+            <button
+              type="button"
+              class="btn btn-outline-secondary btn-sm"
+              (click)="goPrevious()"
+              [disabled]="currentIndex === 0"
+            >
+              ‹ Previous
+            </button>
+
+            <span class="js7-progress">
+              Day {{ currentDay.id }} of {{ days.length }}
+            </span>
+
+            <button
+              type="button"
+              class="btn btn-primary btn-sm"
+              (click)="goNext()"
+              [disabled]="currentIndex === days.length - 1"
+            >
+              Next ›
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <aside class="col-12 col-lg-4">
+        <div class="js7-sidebar">
+          <h3 class="js7-sidebar-title">Days overview</h3>
+          <ul class="js7-day-list list-unstyled mb-0">
+            @for (day of days; track day.id; let i = $index) {
+              <li
+                class="js7-day-item"
+                [class.js7-day-item-active]="i === currentIndex"
+                (click)="selectDay(i)"
+              >
+                <div class="js7-day-label">Day {{ day.id }}</div>
+                <div class="js7-day-topic">{{ day.topic }}</div>
+              </li>
+            }
+          </ul>
+        </div>
+      </aside>
+    </div>
+  } @else {
+    <p class="text-muted">No days configured for this challenge.</p>
+  }
+</section>

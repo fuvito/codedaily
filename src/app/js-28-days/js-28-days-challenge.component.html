@@ -1,0 +1,100 @@
+<section class="container mt-4 js28-page">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <a routerLink="/" class="js28-back-link">
+      ‹ Back to Home
+    </a>
+    <span class="js28-page-label">28 Days · JS / TS track</span>
+  </div>
+
+  @if (days.length > 0) {
+    <div class="row g-4">
+      <!-- Left: current day content -->
+      <div class="col-12 col-lg-8">
+        <header class="js28-header mb-3">
+          <p class="js28-kicker mb-1">28 Days JavaScript / TypeScript Challenge</p>
+          <h2 class="js28-title mb-1">{{ currentDay.title }}</h2>
+          <p class="js28-subtitle mb-0">
+            Day {{ currentDay.id }} · {{ currentDay.topic }}
+          </p>
+        </header>
+
+        <article class="js28-card">
+          <h3 class="js28-card-heading">Challenge</h3>
+          <p class="js28-card-body">{{ currentDay.challenge }}</p>
+
+          <p class="js28-meta mt-3">
+            Tip: Keep a separate file or repo for this 28-day track so you can review your
+            progress.
+          </p>
+
+          <div class="js28-notes mt-4">
+            <label class="js28-notes-label mb-1">
+              Your notes or solution (not saved)
+            </label>
+            <textarea
+              class="form-control js28-notes-textarea"
+              rows="5"
+              placeholder="Write your thoughts, approach, or solution here while you work on this day."
+              [value]="currentNote"
+              (input)="onNoteChange($any($event.target).value)"
+            ></textarea>
+            <div class="d-flex justify-content-end mt-2">
+              <button
+                type="button"
+                class="btn btn-link btn-sm p-0"
+                (click)="clearCurrentNote()"
+              >
+                Clear notes for this day
+              </button>
+            </div>
+          </div>
+
+          <div class="mt-4 d-flex justify-content-between align-items-center">
+            <button
+              type="button"
+              class="btn btn-outline-secondary btn-sm"
+              (click)="goPrevious()"
+              [disabled]="currentIndex === 0"
+            >
+              ‹ Previous
+            </button>
+
+            <span class="js28-meta">
+              Day {{ currentDay.id }} of {{ days.length }}
+            </span>
+
+            <button
+              type="button"
+              class="btn btn-primary btn-sm"
+              (click)="goNext()"
+              [disabled]="currentIndex === days.length - 1"
+            >
+              Next ›
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <!-- Right: day navigation -->
+      <aside class="col-12 col-lg-4">
+        <div class="js28-sidebar">
+          <h3 class="js28-sidebar-title">Days overview</h3>
+          <ul class="js28-day-list list-unstyled mb-0">
+            @for (day of days; track day.id; let i = $index) {
+              <li
+                class="js28-day-item"
+                [class.js28-day-item-active]="i === currentIndex"
+                (click)="selectDay(i)"
+              >
+                <div class="js28-day-label">Day {{ day.id }}</div>
+                <div class="js28-day-topic">{{ day.title }}</div>
+              </li>
+            }
+          </ul>
+        </div>
+      </aside>
+    </div>
+  } @else {
+    <p class="text-muted">No days configured for this challenge.</p>
+  }
+</section>
