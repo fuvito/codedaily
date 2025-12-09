@@ -16,7 +16,20 @@
 }
 
 .cd-nav {
-  margin-bottom: 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  margin: -2rem -1.5rem 2rem;
+  padding: 1rem 1.5rem;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+}
+
+.cd-nav .cd-shell {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .cd-logo {
@@ -51,10 +64,11 @@
   font-weight: 650;
   letter-spacing: -0.05em;
   color: #111827;
+  font-size: 1.1rem;
 }
 
 .cd-logo-sub {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   color: #6b7280;
 }
 
@@ -62,7 +76,7 @@
   display: flex;
   align-items: center;
   gap: 1.25rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .cd-nav-pill {
@@ -76,6 +90,8 @@
 .cd-nav-links .nav-link {
   color: #6b7280;
   padding: 0;
+  font-weight: 500;
+  letter-spacing: 0.01em;
 }
 
 .cd-nav-links .nav-link:hover {
@@ -88,10 +104,25 @@
 }
 
 @media (max-width: 768px) {
-  .cd-nav {
+  .cd-nav .cd-shell {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.75rem;
+  }
+
+  .cd-nav-links {
+    gap: 0.9rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cd-logo-title {
+    font-size: 1.25rem;
+  }
+
+  .cd-nav-links {
+    font-size: 1.05rem;
   }
 }
 

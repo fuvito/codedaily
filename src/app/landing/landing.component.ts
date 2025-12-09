@@ -118,44 +118,56 @@ import { RouterLink } from '@angular/router';
       </header>
 
       <div class="cd-cards row g-3">
-        <article class="cd-card col-12 col-md-4">
-          <h3 class="cd-card-title">7 Days JavaScript (Basics)</h3>
-          <p class="cd-card-meta">
-            A one-week intro track covering variables, control flow, functions, and core
-            language fundamentals.
-          </p>
-          <ul class="cd-card-list">
-            <li>Beginner-friendly pace</li>
-            <li>One concept per day</li>
-            <li>Hands-on mini tasks</li>
-          </ul>
-        </article>
+        <div class="col-12 col-md-6">
+          <article class="card h-100">
+            <div class="card-body">
+              <h3 class="card-title cd-card-title">7 Days JavaScript (Basics)</h3>
+              <p class="card-text cd-card-meta">
+                A one-week intro track covering variables, control flow, functions, and core
+                language fundamentals.
+              </p>
+              <ul class="cd-card-list">
+                <li>Beginner-friendly pace</li>
+                <li>One concept per day</li>
+                <li>Hands-on mini tasks</li>
+              </ul>
+            </div>
+          </article>
+        </div>
 
-        <article class="cd-card col-12 col-md-4">
-          <h3 class="cd-card-title">28 Days JavaScript (Basic → Advanced)</h3>
-          <p class="cd-card-meta">
-            Deepen your skills with four weeks of practice – from callbacks and promises
-            to more advanced patterns.
-          </p>
-          <ul class="cd-card-list">
-            <li>Daily progressive challenges</li>
-            <li>Fundamentals &amp; modern JS</li>
-            <li>Space to experiment</li>
-          </ul>
-        </article>
+        <div class="col-12 col-md-6">
+          <article class="card h-100">
+            <div class="card-body">
+              <h3 class="card-title cd-card-title">28 Days JavaScript (Basic → Advanced)</h3>
+              <p class="card-text cd-card-meta">
+                Deepen your skills with four weeks of practice – from callbacks and promises
+                to more advanced patterns.
+              </p>
+              <ul class="cd-card-list">
+                <li>Daily progressive challenges</li>
+                <li>Fundamentals &amp; modern JS</li>
+                <li>Space to experiment</li>
+              </ul>
+            </div>
+          </article>
+        </div>
 
-        <article class="cd-card cd-card-muted col-12 col-md-4">
-          <h3 class="cd-card-title">More subjects coming</h3>
-          <p class="cd-card-meta">
-            As CodeDaily grows, you&apos;ll get new study subjects and a Supabase-backed
-            backend for progress tracking.
-          </p>
-          <ul class="cd-card-list">
-            <li>Additional languages</li>
-            <li>Frontend frameworks</li>
-            <li>Backend fundamentals</li>
-          </ul>
-        </article>
+        <div class="col-12 col-md-6">
+          <article class="card h-100 cd-card-muted">
+            <div class="card-body">
+              <h3 class="card-title cd-card-title">More subjects coming</h3>
+              <p class="card-text cd-card-meta">
+                As CodeDaily grows, you&apos;ll get new study subjects and a Supabase-backed
+                backend for progress tracking.
+              </p>
+              <ul class="cd-card-list">
+                <li>Additional languages</li>
+                <li>Frontend frameworks</li>
+                <li>Backend fundamentals</li>
+              </ul>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
   `

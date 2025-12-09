@@ -250,20 +250,14 @@
 }
 
 .cd-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
+  margin-top: 1.25rem;
 }
 
 .cd-card {
-  border-radius: 1rem;
-  padding: 1rem;
-  border: 1px solid #e5e7eb;
-  background: #ffffff;
   font-size: 0.85rem;
 }
 
-.cd-card-muted {
+.card.cd-card-muted {
   border-style: dashed;
 }
 
