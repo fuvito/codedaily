@@ -1,40 +1,5 @@
 <main class="cd-page">
-  <header class="cd-nav">
-    <div class="cd-shell">
-      <div class="cd-logo">
-        <div class="cd-logo-mark">
-          <span>CD</span>
-        </div>
-        <div class="cd-logo-text">
-          <span class="cd-logo-title">CodeDaily</span>
-          <span class="cd-logo-sub">Daily coding challenges for curious minds</span>
-        </div>
-      </div>
-
-      <nav class="cd-nav-links nav">
-        <a
-          class="nav-link"
-          routerLink="/"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: true }"
-        >
-          Home
-        </a>
-        <a class="nav-link" routerLink="/js-7-days" routerLinkActive="active">
-          7 Days JS
-        </a>
-        <a class="nav-link" routerLink="/python-7-days" routerLinkActive="active">
-          7 Days Python
-        </a>
-        <a class="nav-link" routerLink="/js-28-days" routerLinkActive="active">
-          28 Days JS
-        </a>
-        <a class="nav-link" routerLink="/python-28-days" routerLinkActive="active">
-          28 Days Python
-        </a>
-      </nav>
-    </div>
-  </header>
+  <cd-nav-bar></cd-nav-bar>
 
   <div class="cd-shell">
     <router-outlet />

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { Title, Meta } from '@angular/platform-browser';
 import { PYTHON_28_DAYS_CHALLENGES, Python28Day } from './python-28-days-challenges.data';
 
 @Component({
@@ -70,7 +71,17 @@ export class Python28DaysChallengeComponent {
     this.currentNote = '';
   }
 
+  private readonly title = inject(Title);
+  private readonly meta = inject(Meta);
+
   constructor() {
     this.loadNoteForCurrentDay();
+
+    this.title.setTitle('28 Days Python Challenge — CodeDaily');
+    this.meta.updateTag({
+      name: 'description',
+      content:
+        'A 28-day Python track from fundamentals to real-world patterns, covering data, APIs, OOP, and more.',
+    });
   }
 }

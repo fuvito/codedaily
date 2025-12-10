@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 import { JsDay, JS_7_DAYS_CHALLENGES } from './js-7-days-challenges.data';
 
@@ -10,6 +11,8 @@ import { JsDay, JS_7_DAYS_CHALLENGES } from './js-7-days-challenges.data';
   templateUrl: './js-7-days-challenge.component.html'
 })
 export class Js7DaysChallengeComponent {
+  private readonly title = inject(Title);
+  private readonly meta = inject(Meta);
   readonly days: JsDay[] = JS_7_DAYS_CHALLENGES;
 
   currentIndex = 0;
@@ -72,5 +75,12 @@ export class Js7DaysChallengeComponent {
 
   constructor() {
     this.loadNoteForCurrentDay();
+
+    this.title.setTitle('7 Days JavaScript Challenge — CodeDaily');
+    this.meta.updateTag({
+      name: 'description',
+      content:
+        'Practice core JavaScript fundamentals over 7 focused days with daily tasks, starter code, and space for notes.',
+    });
   }
 }

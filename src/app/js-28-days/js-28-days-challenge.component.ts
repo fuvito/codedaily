@@ -1,6 +1,7 @@
-import {Component} from '@angular/core';
-import {RouterLink} from '@angular/router';
-import {JS_28_DAYS_CHALLENGES, Js28Day} from './js-28-days-challenges.data';
+import { Component, inject } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { JS_28_DAYS_CHALLENGES, Js28Day } from './js-28-days-challenges.data';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'cd-js-28-days-challenge',
@@ -70,7 +71,17 @@ export class Js28DaysChallengeComponent {
     this.currentNote = '';
   }
 
+  private readonly title = inject(Title);
+  private readonly meta = inject(Meta);
+
   constructor() {
     this.loadNoteForCurrentDay();
+
+    this.title.setTitle('28 Days JavaScript Challenge — CodeDaily');
+    this.meta.updateTag({
+      name: 'description',
+      content:
+        'A 28-day JavaScript roadmap from fundamentals to advanced concepts, with daily challenges, starter code, and notes.',
+    });
   }
 }

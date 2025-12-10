@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -201,17 +202,17 @@ import { RouterLink } from '@angular/router';
         </div>
 
         <div class="col-12 col-md-6">
-          <article class="card h-100 cd-card-muted">
+          <article class="card h-100">
             <div class="card-body">
-              <h3 class="card-title cd-card-title">More subjects coming</h3>
+              <h3 class="card-title cd-card-title">28 Days Python (Fundamentals → Real World)</h3>
               <p class="card-text cd-card-meta">
-                As CodeDaily grows, you&apos;ll get new study subjects and a Supabase-backed
-                backend for progress tracking.
+                A four-week Python track that starts from basics and moves into APIs, JSON,
+                dates, OOP, and real-world patterns.
               </p>
               <ul class="cd-card-list">
-                <li>Additional languages</li>
-                <li>Frontend frameworks</li>
-                <li>Backend fundamentals</li>
+                <li>Week 1: Core Python fundamentals</li>
+                <li>Week 2: Intermediate concepts &amp; tooling</li>
+                <li>Week 3–4: OOP, APIs, data, and advanced patterns</li>
               </ul>
             </div>
           </article>
@@ -220,4 +221,16 @@ import { RouterLink } from '@angular/router';
     </section>
   `
 })
-export class LandingComponent {}
+export class LandingComponent {
+  private readonly title = inject(Title);
+  private readonly meta = inject(Meta);
+
+  constructor() {
+    this.title.setTitle('CodeDaily — Daily JavaScript & Python Coding Challenges');
+    this.meta.updateTag({
+      name: 'description',
+      content:
+        'CodeDaily is a startup-style learning lab with daily JavaScript and Python challenges across 7-day and 28-day tracks.',
+    });
+  }
+}

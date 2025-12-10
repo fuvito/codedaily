@@ -1,8 +1,35 @@
-# Cd
+# CodeDaily — Daily JavaScript & Python Coding Challenges
+
+CodeDaily is a small, focused practice lab for building a **daily coding habit**.
+The goal is to provide short, finishable challenges that fit into a busy day, with
+clear structure across 7‑day and 28‑day tracks so you always know what to do next.
+
+## Challenge Tracks
+
+- **7 Days JavaScript (Basics):** Variables, control flow, functions, and core JS.
+- **28 Days JavaScript (Basic → Advanced):** From fundamentals to modern JS and TS.
+- **7 Days Python (Basics):** Console‑based Python scripts focusing on fundamentals.
+- **28 Days Python (Fundamentals → Real World):** From basics to OOP, data, and APIs.
+
+Each track includes:
+
+- Focused daily challenge prompts
+- Short background/context
+- Starter code snippets
+- A notes area so learners can record insights
+
+## Technologies
+
+- **Framework:** Angular (standalone components, router)
+- **Language:** TypeScript for the frontend, JavaScript/Python for challenge code
+- **Styling:** Custom CSS plus Bootstrap utilities
+- **Build tooling:** Angular CLI
+
+## Development
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.2.
 
-## Development server
+### Development server
 
 To start a local development server, run:
 
@@ -12,7 +39,7 @@ ng serve
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
+### Code scaffolding
 
 Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
@@ -26,7 +53,7 @@ For a complete list of available schematics (such as `components`, `directives`,
 ng generate --help
 ```
 
-## Building
+### Building
 
 To build the project run:
 
@@ -36,7 +63,7 @@ ng build
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## Running unit tests
+### Running unit tests
 
 To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
 
@@ -44,7 +71,7 @@ To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use th
 ng test
 ```
 
-## Running end-to-end tests
+### Running end-to-end tests
 
 For end-to-end (e2e) testing, run:
 

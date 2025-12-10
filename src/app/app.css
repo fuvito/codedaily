@@ -42,17 +42,17 @@
   width: 34px;
   height: 34px;
   border-radius: 0.9rem;
-  background: linear-gradient(135deg, #2563eb, #22c55e);
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 2px 8px rgba(15, 23, 42, 0.15);
 }
 
-.cd-logo-mark span {
-  font-weight: 700;
-  font-size: 0.85rem;
-  color: #f9fafb;
+.cd-logo-mark img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: inherit;
+  display: block;
 }
 
 .cd-logo-text {
