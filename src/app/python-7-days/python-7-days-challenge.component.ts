@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { Title, Meta } from '@angular/platform-browser';
 import { PYTHON_7_DAYS_CHALLENGES, PythonDay } from './python-7-days-challenges.data';
 
 @Component({
@@ -70,7 +71,17 @@ export class Python7DaysChallengeComponent {
     this.currentNote = '';
   }
 
+  private readonly title = inject(Title);
+  private readonly meta = inject(Meta);
+
   constructor() {
     this.loadNoteForCurrentDay();
+
+    this.title.setTitle('7 Days Python Challenge — CodeDaily');
+    this.meta.updateTag({
+      name: 'description',
+      content:
+        'Learn Python fundamentals in 7 days with small, console-based scripts, daily challenges, starter code, and a notes area.',
+    });
   }
 }

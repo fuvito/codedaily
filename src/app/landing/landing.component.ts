@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -220,4 +221,16 @@ import { RouterLink } from '@angular/router';
     </section>
   `
 })
-export class LandingComponent {}
+export class LandingComponent {
+  private readonly title = inject(Title);
+  private readonly meta = inject(Meta);
+
+  constructor() {
+    this.title.setTitle('CodeDaily — Daily JavaScript & Python Coding Challenges');
+    this.meta.updateTag({
+      name: 'description',
+      content:
+        'CodeDaily is a startup-style learning lab with daily JavaScript and Python challenges across 7-day and 28-day tracks.',
+    });
+  }
+}

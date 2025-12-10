@@ -42,6 +42,9 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
           <a class="nav-link" routerLink="/python-28-days" routerLinkActive="active">
             28 Days Python
           </a>
+          <a class="nav-link" routerLink="/about" routerLinkActive="active">
+            About
+          </a>
         </nav>
       </div>
     </header>

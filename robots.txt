@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://codedaily-7-28.netlify.app/sitemap.xml
+

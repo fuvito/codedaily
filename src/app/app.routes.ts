@@ -4,6 +4,7 @@ import { Js7DaysChallengeComponent } from './js-7-days/js-7-days-challenge.compo
 import { Js28DaysChallengeComponent } from './js-28-days/js-28-days-challenge.component';
 import { Python7DaysChallengeComponent } from './python-7-days/python-7-days-challenge.component';
 import { Python28DaysChallengeComponent } from './python-28-days/python-28-days-challenge.component';
+import { AboutComponent } from './about/about.component';
 
 export const routes: Routes = [
   {
@@ -25,5 +26,9 @@ export const routes: Routes = [
   {
     path: 'python-28-days',
     component: Python28DaysChallengeComponent
+  },
+  {
+    path: 'about',
+    component: AboutComponent
   }
 ];
