@@ -1,2 +1,399 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'bootstrap/dist/css/bootstrap.min.css';
+
+/*
+  Shared challenge layout styles
+  Applied across JS/Python 7-day and 28-day tracks to keep visuals consistent.
+*/
+
+/*
+  Global page + nav layout (from app.css)
+  Make these global so both App and NavComponent share the same styling.
+*/
+
+.cd-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem 3rem;
+  background: #f3f4f6; /* light gray */
+  color: #111827;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    sans-serif;
+}
+
+.cd-shell {
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.cd-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  margin: -2rem -1.5rem 2rem;
+  padding: 1rem 1.5rem;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+}
+
+.cd-nav .cd-shell {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cd-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cd-logo-mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.15);
+}
+
+.cd-logo-mark img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: inherit;
+  display: block;
+}
+
+.cd-logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.cd-logo-title {
+  font-weight: 650;
+  letter-spacing: -0.05em;
+  color: #111827;
+  font-size: 1.1rem;
+}
+
+.cd-logo-sub {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.cd-logo-banner {
+  height: 20px;
+  width: auto;
+  display: block;
+}
+
+.cd-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  font-size: 1rem;
+}
+
+.cd-nav-pill {
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  color: #4b5563;
+}
+
+.cd-nav-links .nav-link {
+  color: #6b7280;
+  padding: 0;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.cd-nav-links .nav-link:hover {
+  color: #111827;
+}
+
+.cd-nav-links .nav-link.active {
+  color: #111827;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .cd-nav .cd-shell {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .cd-nav-links {
+    gap: 0.9rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cd-logo-title {
+    font-size: 1.25rem;
+  }
+
+  .cd-nav-links {
+    font-size: 1.05rem;
+  }
+}
+
+/* Page shell */
+.js7-page,
+.js28-page,
+.py7-page,
+.py28-page {
+  margin-bottom: 3rem;
+}
+
+/* Back link + label */
+.js7-back-link,
+.js28-back-link,
+.py7-back-link,
+.py28-back-link {
+  font-size: 0.85rem;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.js7-back-link:hover,
+.js28-back-link:hover,
+.py7-back-link:hover,
+.py28-back-link:hover {
+  text-decoration: underline;
+}
+
+.js7-page-label,
+.js28-page-label,
+.py7-page-label,
+.py28-page-label {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* Header */
+.js7-header,
+.js28-header,
+.py7-header,
+.py28-header {
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0.75rem;
+}
+
+.js7-kicker,
+.js28-kicker,
+.py7-kicker,
+.py28-kicker {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6b7280;
+}
+
+.js7-title,
+.js28-title,
+.py7-title,
+.py28-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.js7-subtitle,
+.js28-subtitle,
+.py7-subtitle,
+.py28-subtitle {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+/* Main card */
+.js7-card,
+.js28-card,
+.py7-card,
+.py28-card {
+  margin-top: 1rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+}
+
+.js7-card-heading,
+.js28-card-heading,
+.py7-card-heading,
+.py28-card-heading {
+  font-size: 1rem;
+  font-weight: 550;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+.js7-card-body,
+.js28-card-body,
+.py7-card-body,
+.py28-card-body {
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+/* Starter code blocks */
+.js7-starter,
+.js28-starter,
+.py7-starter,
+.py28-starter {
+  margin-top: 0.75rem;
+}
+
+.js7-starter-label,
+.js28-starter-label,
+.py7-starter-label,
+.py28-starter-label {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.js7-starter-code,
+.js28-starter-code,
+.py7-starter-code,
+.py28-starter-code {
+  margin: 0;
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.75rem;
+  background-color: #111827;
+  color: #e5e7eb;
+  font-size: 0.8rem;
+  overflow-x: auto;
+}
+
+/* Notes / meta text */
+.js7-hint,
+.py7-hint {
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.75rem;
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  font-size: 0.85rem;
+}
+
+.js7-notes-label,
+.js28-notes-label,
+.py7-notes-label,
+.py28-notes-label {
+  font-size: 0.8rem;
+  color: #4b5563;
+}
+
+.js7-notes-textarea,
+.js28-notes-textarea,
+.py7-notes-textarea,
+.py28-notes-textarea {
+  font-size: 0.88rem;
+}
+
+.js7-actions .js7-progress,
+.js28-actions .js28-progress,
+.py7-actions .py7-progress,
+.py28-actions .py28-progress {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.js28-meta,
+.py28-meta {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* Sidebar / day list */
+.js7-sidebar,
+.js28-sidebar,
+.py7-sidebar,
+.py28-sidebar {
+  border-radius: 1rem;
+  padding: 1rem;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+}
+
+.js7-sidebar-title,
+.js28-sidebar-title,
+.py7-sidebar-title,
+.py28-sidebar-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #111827;
+}
+
+.js7-day-list,
+.js28-day-list,
+.py7-day-list,
+.py28-day-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.js7-day-item,
+.js28-day-item,
+.py7-day-item,
+.py28-day-item {
+  padding: 0.45rem 0.65rem;
+  border-radius: 0.75rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease,
+    transform 0.1s ease;
+}
+
+.js7-day-item:hover,
+.js28-day-item:hover,
+.py7-day-item:hover,
+.py28-day-item:hover {
+  background-color: #f3f4f6;
+}
+
+.js7-day-item-active,
+.js28-day-item-active,
+.py7-day-item-active,
+.py28-day-item-active {
+  background-color: #eff6ff;
+  border-color: #bfdbfe;
+  transform: translateX(1px);
+}
+
+.js7-day-label,
+.js28-day-label,
+.py7-day-label,
+.py28-day-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.js7-day-topic,
+.js28-day-topic,
+.py7-day-topic,
+.py28-day-topic {
+  font-size: 0.85rem;
+  color: #111827;
+}
+
+@media (max-width: 768px) {
+  .js7-sidebar,
+  .js28-sidebar,
+  .py7-sidebar,
+  .py28-sidebar {
+    margin-top: 1rem;
+  }
+}

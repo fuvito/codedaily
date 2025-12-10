@@ -7,7 +7,7 @@
   width: 100%;
   border-radius: 1rem;
   overflow: hidden;
-  background-image: url('/assets/CodeDaily.png');
+  background-image: url('/assets/cd.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -135,7 +135,7 @@
 
 .cd-hero-right {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .cd-board {
