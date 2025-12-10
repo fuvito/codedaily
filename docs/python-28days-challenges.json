@@ -1,0 +1,230 @@
+{
+  "language": "python",
+  "program_name": "CodeDaily - Python 28 Day Challenge",
+  "days": [
+    {
+      "day": 1,
+      "title": "Variables & Input",
+      "concepts": ["Variables", "Data types", "input()", "print()"],
+      "challenge": "Ask the user for their name and age, then print a greeting.",
+      "starterCode": "name = input('Enter name: ')\nage = input('Enter age: ')\n# Your code here\n",
+      "difficulty": "easy"
+    },
+    {
+      "day": 2,
+      "title": "Conditionals",
+      "concepts": ["if/elif/else", "Comparison operators"],
+      "challenge": "Check if a number is positive, negative, or zero.",
+      "starterCode": "num = int(input('Enter number: '))\n# Your code here\n",
+      "difficulty": "easy"
+    },
+    {
+      "day": 3,
+      "title": "Lists",
+      "concepts": ["List creation", "Indexing", "len()", "append()"],
+      "challenge": "Create a list of five numbers and print the first, last, and sum.",
+      "starterCode": "nums = []  # add five numbers\n# Your code here\n",
+      "difficulty": "easy"
+    },
+    {
+      "day": 4,
+      "title": "Loops",
+      "concepts": ["for loops", "range()", "Looping lists"],
+      "challenge": "Print all even numbers between 1 and 50.",
+      "starterCode": "# Your code here\n",
+      "difficulty": "easy"
+    },
+    {
+      "day": 5,
+      "title": "Functions",
+      "concepts": ["def", "Parameters", "Return values"],
+      "challenge": "Write a function that returns the square of a number.",
+      "starterCode": "def square(n):\n    pass\n",
+      "difficulty": "easy"
+    },
+    {
+      "day": 6,
+      "title": "Strings",
+      "concepts": ["Slicing", "upper()", "split()", "f-strings"],
+      "challenge": "Reverse the WORDS in a sentence.",
+      "starterCode": "sentence = ''\n# Your code here\n",
+      "difficulty": "easy"
+    },
+    {
+      "day": 7,
+      "title": "Dictionaries",
+      "concepts": ["Key/value pairs", "Updating values", "Looping dicts"],
+      "challenge": "Create a user dictionary (name, age, city) and print each key/value.",
+      "starterCode": "user = { 'name': '', 'age': 0, 'city': '' }\n# Your code here\n",
+      "difficulty": "easy"
+    },
+    {
+      "day": 8,
+      "title": "Tuples & Sets",
+      "concepts": ["Tuples", "Immutability", "Sets", "Unique values"],
+      "challenge": "Given a list with duplicates, convert to a set and print unique numbers.",
+      "starterCode": "nums = [1,1,2,3,3,4]\n# Your code here\n",
+      "difficulty": "easy"
+    },
+    {
+      "day": 9,
+      "title": "List Comprehensions",
+      "concepts": ["Comprehensions", "Filtering", "Mapping"],
+      "challenge": "Create a list of squares from 1 to 20 using a comprehension.",
+      "starterCode": "# Your code here\n",
+      "difficulty": "easy"
+    },
+    {
+      "day": 10,
+      "title": "Error Handling",
+      "concepts": ["try/except", "ValueError", "Custom error messages"],
+      "challenge": "Write a program that handles invalid numeric input gracefully.",
+      "starterCode": "try:\n    num = int(input('Enter number: '))\nexcept:\n    pass\n",
+      "difficulty": "medium"
+    },
+    {
+      "day": 11,
+      "title": "File Handling",
+      "concepts": ["open()", "read()", "write()", "with"],
+      "challenge": "Write text to a file, then read it back and print.",
+      "starterCode": "# Your code here\n",
+      "difficulty": "medium"
+    },
+    {
+      "day": 12,
+      "title": "Modules & Imports",
+      "concepts": ["Creating modules", "import", "from import"],
+      "challenge": "Create a custom module with a function and import it.",
+      "starterCode": "# module.py: define a function\n# main.py: import and use it",
+      "difficulty": "medium"
+    },
+    {
+      "day": 13,
+      "title": "Packages & venv",
+      "concepts": ["pip install", "venv basics"],
+      "challenge": "Install a package (e.g., requests) and print its version.",
+      "starterCode": "# Your code here\n",
+      "difficulty": "medium"
+    },
+    {
+      "day": 14",
+      "title": "Debugging Basics",
+      "concepts": ["print debugging", "common errors"],
+      "challenge": "Fix a buggy function that calculates factorial.",
+      "starterCode": "def factorial(n):\n    # buggy code\n    pass\n",
+      "difficulty": "medium"
+    },
+    {
+      "day": 15,
+      "title": "OOP Basics",
+      "concepts": ["Classes", "Objects", "Attributes"],
+      "challenge": "Create a class Person with name and age, then print a greeting.",
+      "starterCode": "class Person:\n    pass\n",
+      "difficulty": "medium"
+    },
+    {
+      "day": 16,
+      "title": "Inheritance & Polymorphism",
+      "concepts": ["Subclassing", "Method override"],
+      "challenge": "Create classes Animal → Dog with overridden speak() method.",
+      "starterCode": "# Your code here\n",
+      "difficulty": "medium"
+    },
+    {
+      "day": 17,
+      "title": "Dataclasses",
+      "concepts": ["@dataclass", "Auto-generated methods"],
+      "challenge": "Create a dataclass for Book (title, author, pages).",
+      "starterCode": "from dataclasses import dataclass\n# Your code here\n",
+      "difficulty": "medium"
+    },
+    {
+      "day": 18,
+      "title": "Working with APIs",
+      "concepts": ["requests.get()", "Status codes"],
+      "challenge": "Fetch https://api.github.com and print the current rate limit.",
+      "starterCode": "import requests\n# Your code here\n",
+      "difficulty": "medium"
+    },
+    {
+      "day": 19,
+      "title": "JSON Handling",
+      "concepts": ["json.load()", "json.dump()", "Parsing"],
+      "challenge": "Load JSON from a string and print each key/value.",
+      "starterCode": "import json\n# Your code here\n",
+      "difficulty": "medium"
+    },
+    {
+      "day": 20,
+      "title": "Date & Time",
+      "concepts": ["datetime", "Formatting dates"],
+      "challenge": "Print the current date in format YYYY-MM-DD.",
+      "starterCode": "from datetime import datetime\n# Your code here\n",
+      "difficulty": "medium"
+    },
+    {
+      "day": 21,
+      "title": "Generators & Iterators",
+      "concepts": ["yield", "Lazy evaluation"],
+      "challenge": "Create a generator that yields numbers 1–10.",
+      "starterCode": "def gen():\n    yield 1\n# continue\n",
+      "difficulty": "medium"
+    },
+    {
+      "day": 22,
+      "title": "Recursion",
+      "concepts": ["Recursive functions", "Base cases"],
+      "challenge": "Implement recursive Fibonacci.",
+      "starterCode": "def fib(n):\n    pass\n",
+      "difficulty": "hard"
+    },
+    {
+      "day": 23,
+      "title": "Lambda Functions",
+      "concepts": ["lambda", "map", "filter", "reduce"],
+      "challenge": "Use lambda + filter to extract even numbers from a list.",
+      "starterCode": "nums = [1,2,3,4,5,6]\n# Your code here\n",
+      "difficulty": "medium"
+    },
+    {
+      "day": 24,
+      "title": "Decorators",
+      "concepts": ["Higher-order functions", "Wrapper functions"],
+      "challenge": "Write a decorator that prints a message before and after a function runs.",
+      "starterCode": "def my_decorator(fn):\n    def wrapper():\n        pass\n    return wrapper\n",
+      "difficulty": "hard"
+    },
+    {
+      "day": 25,
+      "title": "Context Managers",
+      "concepts": ["with", "__enter__", "__exit__"],
+      "challenge": "Implement a custom context manager that logs entry and exit.",
+      "starterCode": "class Logger:\n    pass\n",
+      "difficulty": "hard"
+    },
+    {
+      "day": 26,
+      "title": "Regular Expressions",
+      "concepts": ["re.search()", "re.findall()"],
+      "challenge": "Extract all email addresses from a string.",
+      "starterCode": "import re\ntext = 'Contact: a@b.com, x@y.org'\n# Your code here\n",
+      "difficulty": "hard"
+    },
+    {
+      "day": 27,
+      "title": "Data Structures",
+      "concepts": ["Stack", "Queue", "List-based structures"],
+      "challenge": "Implement a Stack class with push/pop.",
+      "starterCode": "class Stack:\n    pass\n",
+      "difficulty": "hard"
+    },
+    {
+      "day": 28,
+      "title": "Final Project",
+      "concepts": ["APIs", "JSON", "OOP", "Error handling"],
+      "challenge": "Build a mini GitHub user fetcher: ask for a username, call the API, and print repo count.",
+      "starterCode": "import requests\n# Your code here\n",
+      "difficulty": "hard"
+    }
+  ]
+}

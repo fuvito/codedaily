@@ -1,28 +1,28 @@
-.js28-page {
+.py7-page {
   margin-bottom: 3rem;
 }
 
-.js28-back-link {
+.py7-back-link {
   font-size: 0.85rem;
   color: #2563eb;
   text-decoration: none;
 }
 
-.js28-back-link:hover {
+.py7-back-link:hover {
   text-decoration: underline;
 }
 
-.js28-page-label {
+.py7-page-label {
   font-size: 0.8rem;
   color: #6b7280;
 }
 
-.js28-header {
+.py7-header {
   border-bottom: 1px solid #e5e7eb;
   padding-bottom: 0.75rem;
 }
 
-.js28-kicker {
+.py7-kicker {
   font-size: 0.75rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -30,18 +30,18 @@
   color: #6b7280;
 }
 
-.js28-title {
+.py7-title {
   font-size: 1.4rem;
   font-weight: 600;
   color: #111827;
 }
 
-.js28-subtitle {
+.py7-subtitle {
   font-size: 0.9rem;
   color: #6b7280;
 }
 
-.js28-card {
+.py7-card {
   margin-top: 1rem;
   padding: 1.25rem 1.5rem;
   border-radius: 1rem;
@@ -50,28 +50,38 @@
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
 }
 
-.js28-card-heading {
+.py7-card-heading {
   font-size: 1rem;
   font-weight: 550;
   margin-bottom: 0.5rem;
   color: #111827;
 }
 
-.js28-card-body {
+.py7-card-body {
   font-size: 0.95rem;
   color: #374151;
 }
 
-.js28-starter {
+.py7-concepts {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.py7-concept-item::before {
+  content: '\2022 ';
+  color: #9ca3af;
+}
+
+.py7-starter {
   margin-top: 0.75rem;
 }
 
-.js28-starter-label {
+.py7-starter-label {
   font-size: 0.8rem;
   color: #6b7280;
 }
 
-.js28-starter-code {
+.py7-starter-code {
   margin: 0;
   padding: 0.75rem 0.9rem;
   border-radius: 0.75rem;
@@ -81,32 +91,49 @@
   overflow-x: auto;
 }
 
-.js28-meta {
+.py7-hint {
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.75rem;
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  font-size: 0.85rem;
+}
+
+.py7-notes-label {
+  font-size: 0.8rem;
+  color: #4b5563;
+}
+
+.py7-notes-textarea {
+  font-size: 0.88rem;
+}
+
+.py7-actions .py7-progress {
   font-size: 0.8rem;
   color: #6b7280;
 }
 
-.js28-sidebar {
+.py7-sidebar {
   border-radius: 1rem;
   padding: 1rem;
   border: 1px solid #e5e7eb;
   background-color: #ffffff;
 }
 
-.js28-sidebar-title {
+.py7-sidebar-title {
   font-size: 0.9rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
   color: #111827;
 }
 
-.js28-day-list {
+.py7-day-list {
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
 }
 
-.js28-day-item {
+.py7-day-item {
   padding: 0.45rem 0.65rem;
   border-radius: 0.75rem;
   border: 1px solid transparent;
@@ -114,38 +141,29 @@
   transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
 }
 
-.js28-day-item:hover {
+.py7-day-item:hover {
   background-color: #f3f4f6;
 }
 
-.js28-day-item-active {
+.py7-day-item-active {
   background-color: #eff6ff;
   border-color: #bfdbfe;
   transform: translateX(1px);
 }
 
-.js28-day-label {
+.py7-day-label {
   font-size: 0.8rem;
   font-weight: 500;
   color: #4b5563;
 }
 
-.js28-day-topic {
+.py7-day-topic {
   font-size: 0.85rem;
   color: #111827;
 }
 
-.js28-notes-label {
-  font-size: 0.8rem;
-  color: #4b5563;
-}
-
-.js28-notes-textarea {
-  font-size: 0.88rem;
-}
-
 @media (max-width: 768px) {
-  .js28-sidebar {
+  .py7-sidebar {
     margin-top: 1rem;
   }
 }

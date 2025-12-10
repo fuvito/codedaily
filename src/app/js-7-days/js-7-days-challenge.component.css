@@ -62,6 +62,25 @@
   color: #374151;
 }
 
+.js7-starter {
+  margin-top: 0.75rem;
+}
+
+.js7-starter-label {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.js7-starter-code {
+  margin: 0;
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.75rem;
+  background-color: #111827;
+  color: #e5e7eb;
+  font-size: 0.8rem;
+  overflow-x: auto;
+}
+
 .js7-hint {
   padding: 0.75rem 0.9rem;
   border-radius: 0.75rem;

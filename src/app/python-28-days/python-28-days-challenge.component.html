@@ -1,45 +1,52 @@
-<section class="container mt-4 js28-page">
+<section class="container mt-4 py28-page">
   <div class="d-flex justify-content-between align-items-center mb-3">
-    <a routerLink="/" class="js28-back-link">
+    <a routerLink="/" class="py28-back-link">
       ‹ Back to Home
     </a>
-    <span class="js28-page-label">28 Days · JS / TS track</span>
+    <span class="py28-page-label">28 Days · Python track</span>
   </div>
 
   @if (days.length > 0) {
     <div class="row g-4">
       <!-- Left: current day content -->
       <div class="col-12 col-lg-8">
-        <header class="js28-header mb-3">
-          <p class="js28-kicker mb-1">28 Days JavaScript / TypeScript Challenge</p>
-          <h2 class="js28-title mb-1">{{ currentDay.title }}</h2>
-          <p class="js28-subtitle mb-0">
+        <header class="py28-header mb-3">
+          <p class="py28-kicker mb-1">28 Days Python Challenge</p>
+          <h2 class="py28-title mb-1">{{ currentDay.title }}</h2>
+          <p class="py28-subtitle mb-0">
             Day {{ currentDay.id }} · {{ currentDay.topic }}
           </p>
         </header>
 
-        <article class="js28-card">
-          <h3 class="js28-card-heading">Challenge</h3>
-          <p class="js28-card-body">{{ currentDay.challenge }}</p>
+        <article class="py28-card">
+          <h3 class="py28-card-heading">Concepts</h3>
+          <ul class="py28-concepts list-unstyled mb-3">
+            @for (concept of currentDay.concepts; track concept) {
+              <li class="py28-concept-item">{{ concept }}</li>
+            }
+          </ul>
+
+          <h3 class="py28-card-heading">Challenge</h3>
+          <p class="py28-card-body">{{ currentDay.challenge }}</p>
 
           @if (currentDay.starterCode) {
-            <div class="js28-starter mt-3">
-              <p class="mb-1 js28-starter-label">Starter code</p>
-              <pre class="js28-starter-code"><code>{{ currentDay.starterCode }}</code></pre>
+            <div class="py28-starter mt-3">
+              <p class="mb-1 py28-starter-label">Starter code</p>
+              <pre class="py28-starter-code"><code>{{ currentDay.starterCode }}</code></pre>
             </div>
           }
 
-          <p class="js28-meta mt-3">
-            Tip: Keep a separate file or repo for this 28-day track so you can review your
-            progress.
+          <p class="py28-meta mt-3">
+            Tip: Keep a separate folder or repo for this 28-day Python track so you can
+            review your progress over the month.
           </p>
 
-          <div class="js28-notes mt-4">
-            <label class="js28-notes-label mb-1">
+          <div class="py28-notes mt-4">
+            <label class="py28-notes-label mb-1">
               Your notes or solution (not saved)
             </label>
             <textarea
-              class="form-control js28-notes-textarea"
+              class="form-control py28-notes-textarea"
               rows="5"
               placeholder="Write your thoughts, approach, or solution here while you work on this day."
               [value]="currentNote"
@@ -56,7 +63,9 @@
             </div>
           </div>
 
-          <div class="mt-4 d-flex justify-content-between align-items-center">
+          <div
+            class="mt-4 d-flex justify-content-between align-items-center py28-actions"
+          >
             <button
               type="button"
               class="btn btn-outline-secondary btn-sm"
@@ -66,7 +75,7 @@
               ‹ Previous
             </button>
 
-            <span class="js28-meta">
+            <span class="py28-meta">
               Day {{ currentDay.id }} of {{ days.length }}
             </span>
 
@@ -84,17 +93,17 @@
 
       <!-- Right: day navigation -->
       <aside class="col-12 col-lg-4">
-        <div class="js28-sidebar">
-          <h3 class="js28-sidebar-title">Days overview</h3>
-          <ul class="js28-day-list list-unstyled mb-0">
+        <div class="py28-sidebar">
+          <h3 class="py28-sidebar-title">Days overview</h3>
+          <ul class="py28-day-list list-unstyled mb-0">
             @for (day of days; track day.id; let i = $index) {
               <li
-                class="js28-day-item"
-                [class.js28-day-item-active]="i === currentIndex"
+                class="py28-day-item"
+                [class.py28-day-item-active]="i === currentIndex"
                 (click)="selectDay(i)"
               >
-                <div class="js28-day-label">Day {{ day.id }}</div>
-                <div class="js28-day-topic">{{ day.title }}</div>
+                <div class="py28-day-label">Day {{ day.id }}</div>
+                <div class="py28-day-topic">{{ day.title }}</div>
               </li>
             }
           </ul>

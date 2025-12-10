@@ -24,8 +24,8 @@ import { RouterLink } from '@angular/router';
         </h1>
 
         <p class="cd-hero-subtitle">
-          CodeDaily is a startup-style learning lab: focused JavaScript challenges,
-          background notes, and clear tracks from basics to advanced.
+          CodeDaily is a startup-style learning lab: focused JavaScript and Python
+          challenges, background notes, and clear tracks from basics to advanced.
         </p>
 
         <div class="cd-hero-meta">
@@ -35,7 +35,15 @@ import { RouterLink } from '@angular/router';
           </span>
           <span class="cd-hero-meta-pill">
             <span class="cd-hero-meta-dot"></span>
+            7 Days Python (basics)
+          </span>
+          <span class="cd-hero-meta-pill">
+            <span class="cd-hero-meta-dot"></span>
             28 Days JavaScript (basic → advanced)
+          </span>
+          <span class="cd-hero-meta-pill">
+            <span class="cd-hero-meta-dot"></span>
+            28 Days Python (fundamentals → real world)
           </span>
           <span class="cd-hero-meta-pill">More subjects will be added</span>
         </div>
@@ -51,9 +59,16 @@ import { RouterLink } from '@angular/router';
           <button
             type="button"
             class="cd-btn cd-btn-secondary"
+            routerLink="/python-7-days"
+          >
+            Start 7-day Python challenge
+          </button>
+          <button
+            type="button"
+            class="cd-btn cd-btn-tertiary"
             routerLink="/js-28-days"
           >
-            View 28-day roadmap
+            View 28-day JS roadmap
           </button>
         </div>
 
@@ -91,10 +106,26 @@ import { RouterLink } from '@angular/router';
 
             <article class="cd-track">
               <div class="cd-track-text">
+                <span class="cd-track-title">7 Days Python Challenge</span>
+                <span class="cd-track-meta">Beginner Python · small scripts every day</span>
+              </div>
+              <span class="cd-track-tag">Python · 7 days</span>
+            </article>
+
+            <article class="cd-track">
+              <div class="cd-track-text">
                 <span class="cd-track-title">28 Days JavaScript Challenge</span>
                 <span class="cd-track-meta">From fundamentals to advanced concepts</span>
               </div>
               <span class="cd-track-tag">Basic → Advanced</span>
+            </article>
+
+            <article class="cd-track">
+              <div class="cd-track-text">
+                <span class="cd-track-title">28 Days Python Challenge</span>
+                <span class="cd-track-meta">From Python basics to real-world patterns</span>
+              </div>
+              <span class="cd-track-tag">Python · 28 days</span>
             </article>
 
             <article class="cd-track">
@@ -147,6 +178,23 @@ import { RouterLink } from '@angular/router';
                 <li>Daily progressive challenges</li>
                 <li>Fundamentals &amp; modern JS</li>
                 <li>Space to experiment</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <article class="card h-100">
+            <div class="card-body">
+              <h3 class="card-title cd-card-title">7 Days Python (Basics)</h3>
+              <p class="card-text cd-card-meta">
+                A one-week Python intro covering variables, input, lists, loops, functions,
+                strings, and dictionaries.
+              </p>
+              <ul class="cd-card-list">
+                <li>Beginner-friendly Python</li>
+                <li>Console-based scripts</li>
+                <li>One clear challenge per day</li>
               </ul>
             </div>
           </article>

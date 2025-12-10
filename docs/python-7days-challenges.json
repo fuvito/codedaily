@@ -1,0 +1,91 @@
+{
+  "language": "python",
+  "program_name": "CodeDaily - Python Week 1",
+  "days": [
+    {
+      "day": 1,
+      "title": "Variables & Input",
+      "concepts": [
+        "Variables",
+        "Data types",
+        "input()",
+        "print()"
+      ],
+      "challenge": "Ask the user for their name and age, then print: \"Hello <name>, you are <age> years old.\"",
+      "starterCode": "name = input(\"Enter your name: \")\nage = input(\"Enter your age: \")\n# Your code here\n",
+      "difficulty": "easy"
+    },
+    {
+      "day": 2,
+      "title": "Conditionals",
+      "concepts": [
+        "if / elif / else",
+        "Comparison operators"
+      ],
+      "challenge": "Write a program that checks if a number is positive, negative, or zero.",
+      "starterCode": "num = int(input(\"Enter a number: \") )\n# Your code here\n",
+      "difficulty": "easy"
+    },
+    {
+      "day": 3,
+      "title": "Lists",
+      "concepts": [
+        "List creation",
+        "Indexing",
+        "Appending",
+        "len()"
+      ],
+      "challenge": "Create a list of five numbers. Print the first, the last, and the sum of all numbers.",
+      "starterCode": "numbers = [ ]  # add five numbers\n# Your code here\n",
+      "difficulty": "easy"
+    },
+    {
+      "day": 4,
+      "title": "Loops",
+      "concepts": [
+        "for loops",
+        "range()",
+        "Looping through lists"
+      ],
+      "challenge": "Print all even numbers between 1 and 50.",
+      "starterCode": "# Your code here\n",
+      "difficulty": "easy"
+    },
+    {
+      "day": 5,
+      "title": "Functions",
+      "concepts": [
+        "def",
+        "Parameters",
+        "Return values"
+      ],
+      "challenge": "Create a function square(n) that returns n squared.",
+      "starterCode": "def square(n):\n    # Your code here\n    pass\n",
+      "difficulty": "easy"
+    },
+    {
+      "day": 6,
+      "title": "Strings",
+      "concepts": [
+        "String slicing",
+        "upper(), lower(), replace(), split()",
+        "f-strings"
+      ],
+      "challenge": "Write a function that reverses the words in a sentence (\"hello world\" → \"world hello\").",
+      "starterCode": "sentence = \"\"\n# Your code here\n",
+      "difficulty": "easy"
+    },
+    {
+      "day": 7,
+      "title": "Dictionaries",
+      "concepts": [
+        "Key/value pairs",
+        "Updating values",
+        "Iterating dictionaries"
+      ],
+      "challenge": "Create a user dictionary with name, age, and city. Print each key and value.",
+      "starterCode": "user = {\n    \"name\": \"\",\n    \"age\": 0,\n    \"city\": \"\"\n}\n# Your code here\n",
+      "difficulty": "easy"
+    }
+  ]
+}

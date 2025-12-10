@@ -1,48 +1,54 @@
-<section class="container mt-4 js7-page">
+<section class="container mt-4 py7-page">
   <div class="d-flex justify-content-between align-items-center mb-3">
-    <a routerLink="/" class="js7-back-link">
+    <a routerLink="/" class="py7-back-link">
       ‹ Back to Home
     </a>
-    <span class="js7-page-label">Basics track · 7 days</span>
+    <span class="py7-page-label">Python basics · 7 days</span>
   </div>
 
   @if (days.length > 0) {
     <div class="row g-4">
       <div class="col-12 col-lg-8">
-        <header class="js7-header mb-3">
-          <p class="js7-kicker mb-1">7 Days JavaScript Challenge</p>
-          <h2 class="js7-title mb-1">{{ currentDay.topic }}</h2>
-          <p class="js7-subtitle mb-0">
-            Day {{ currentDay.id }} · {{ currentDay.title }}
+        <header class="py7-header mb-3">
+          <p class="py7-kicker mb-1">7 Days Python Challenge</p>
+          <h2 class="py7-title mb-1">{{ currentDay.title }}</h2>
+          <p class="py7-subtitle mb-0">
+            Day {{ currentDay.id }} · {{ currentDay.topic }}
           </p>
         </header>
 
-        <article class="js7-card">
-          <h3 class="js7-card-heading">Challenge</h3>
-          <p class="js7-card-body">{{ currentDay.challenge }}</p>
+        <article class="py7-card">
+          <h3 class="py7-card-heading">Concepts</h3>
+          <ul class="py7-concepts list-unstyled mb-3">
+            @for (concept of currentDay.concepts; track concept) {
+              <li class="py7-concept-item">{{ concept }}</li>
+            }
+          </ul>
+
+          <h3 class="py7-card-heading">Challenge</h3>
+          <p class="py7-card-body">{{ currentDay.challenge }}</p>
 
           @if (currentDay.starterCode) {
-            <div class="js7-starter mt-3">
-              <p class="mb-1 js7-starter-label">Starter code</p>
-              <pre class="js7-starter-code"><code>{{ currentDay.starterCode }}</code></pre>
+            <div class="py7-starter mt-3">
+              <p class="mb-1 py7-starter-label">Starter code</p>
+              <pre class="py7-starter-code"><code>{{ currentDay.starterCode }}</code></pre>
             </div>
           }
 
-          <div class="js7-hint mt-3">
+          <div class="py7-hint mt-3">
             <p class="mb-1">Tip:</p>
             <p class="mb-0">
-              Open your editor and complete this challenge in a small file or
-              CodeSandbox. Keep your solution short and focused; you can always
-              revisit later.
+              Run these exercises in a local Python file or REPL (VS Code, PyCharm, or an
+              online interpreter). Focus on getting one small script working each day.
             </p>
           </div>
 
-          <div class="js7-notes mt-4">
-            <label class="js7-notes-label mb-1">
+          <div class="py7-notes mt-4">
+            <label class="py7-notes-label mb-1">
               Your notes or solution (not saved)
             </label>
             <textarea
-              class="form-control js7-notes-textarea"
+              class="form-control py7-notes-textarea"
               rows="5"
               placeholder="Write your thoughts, approach, or solution here while you work on this day."
               [value]="currentNote"
@@ -59,7 +65,9 @@
             </div>
           </div>
 
-          <div class="js7-actions mt-4 d-flex justify-content-between align-items-center">
+          <div
+            class="py7-actions mt-4 d-flex justify-content-between align-items-center"
+          >
             <button
               type="button"
               class="btn btn-outline-secondary btn-sm"
@@ -69,7 +77,7 @@
               ‹ Previous
             </button>
 
-            <span class="js7-progress">
+            <span class="py7-progress">
               Day {{ currentDay.id }} of {{ days.length }}
             </span>
 
@@ -86,17 +94,17 @@
       </div>
 
       <aside class="col-12 col-lg-4">
-        <div class="js7-sidebar">
-          <h3 class="js7-sidebar-title">Days overview</h3>
-          <ul class="js7-day-list list-unstyled mb-0">
+        <div class="py7-sidebar">
+          <h3 class="py7-sidebar-title">Days overview</h3>
+          <ul class="py7-day-list list-unstyled mb-0">
             @for (day of days; track day.id; let i = $index) {
               <li
-                class="js7-day-item"
-                [class.js7-day-item-active]="i === currentIndex"
+                class="py7-day-item"
+                [class.py7-day-item-active]="i === currentIndex"
                 (click)="selectDay(i)"
               >
-                <div class="js7-day-label">Day {{ day.id }}</div>
-                <div class="js7-day-topic">{{ day.topic }}</div>
+                <div class="py7-day-label">Day {{ day.id }}</div>
+                <div class="py7-day-topic">{{ day.title }}</div>
               </li>
             }
           </ul>
