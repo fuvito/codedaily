@@ -1,0 +1,89 @@
+.cd-about-page {
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.cd-about-header {
+  margin-bottom: 1.75rem;
+}
+
+.cd-about-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #111827;
+  letter-spacing: -0.04em;
+}
+
+.cd-about-subtitle {
+  max-width: 36rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+
+.cd-about-grid {
+  margin-bottom: 2rem;
+}
+
+.cd-about-card {
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+}
+
+.cd-about-section-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.6rem;
+}
+
+.cd-about-list {
+  padding-left: 1.1rem;
+  margin-bottom: 0;
+  font-size: 0.86rem;
+  color: #4b5563;
+}
+
+.cd-about-list li + li {
+  margin-top: 0.25rem;
+}
+
+.cd-about-footer {
+  margin-top: 1.5rem;
+}
+
+.cd-about-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  font-size: 0.86rem;
+  color: #4b5563;
+}
+
+.cd-about-meta a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.cd-about-meta a:hover {
+  text-decoration: underline;
+}
+
+/* About title banner */
+.cd-about-title-row {
+  display: flex;
+  align-items: center;
+}
+
+.cd-about-title-banner {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .cd-about-page {
+    margin-top: 1rem;
+  }
+}
